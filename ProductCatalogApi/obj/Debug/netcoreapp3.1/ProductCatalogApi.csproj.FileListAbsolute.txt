@@ -1,0 +1,9 @@
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.csprojAssemblyReference.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.AssemblyInfoInputs.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.AssemblyInfo.cs
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.RazorTargetAssemblyInfo.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\staticwebassets\ProductCatalogApi.StaticWebAssets.Manifest.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\staticwebassets\ProductCatalogApi.StaticWebAssets.xml

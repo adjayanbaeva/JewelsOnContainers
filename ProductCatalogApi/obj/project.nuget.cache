@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eVAOhFr7F4f9I6yq+FlsniQHiRh20LPAvAadZANVRmgvBpMUeHUaSRI0rk3fun3Ux7pLUfv0vFXrBYYIIcCAtQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ainur Dzhaianbaeva\\Documents\\Kal Academy\\JewelsOnContainers\\ProductCatalogApi\\ProductCatalogApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
