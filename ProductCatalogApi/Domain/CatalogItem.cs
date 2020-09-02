@@ -14,5 +14,7 @@ namespace ProductCatalogApi.Domain
         public string PictureUrl { get; set; }
         public int CatalogTypeId { get; set; }
         public int CatalogBrandId { get; set; }
+        public virtual CatalogType CatalogType { get; set; }
+        public virtual CatalogBrand CatalogBrand { get; set; }
     }
 }
