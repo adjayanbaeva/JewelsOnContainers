@@ -18,3 +18,5 @@ namespace ProductCatalogApi.Domain
         public virtual CatalogBrand CatalogBrand { get; set; }
     }
 }
+
+
