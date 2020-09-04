@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProductCatalogApi.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,14 @@ namespace ProductCatalogApi.Data
         public CatalogContext(DbContextOptions options)
             : base(options)
         {
-
+            
         }
+
+        public DbSet<CatalogBrand> CatalogBrands { get; set; }
+        public DbSet<CatalogType> CatalogTypes { get; set; }
+        public DbSet<CatalogItem> CatalogItems { get; set; }
+
+
+
     }
 }
