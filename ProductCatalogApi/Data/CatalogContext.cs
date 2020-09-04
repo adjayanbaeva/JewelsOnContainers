@@ -8,6 +8,10 @@ namespace ProductCatalogApi.Data
 {
     public class CatalogContext: DbContext
     {
+        public CatalogContext(DbContextOptions options)
+            : base(options)
+        {
 
+        }
     }
 }
