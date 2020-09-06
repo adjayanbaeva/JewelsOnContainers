@@ -32,6 +32,19 @@ namespace ProductCatalogApi.Data
                     .IsRequired()
                     .HasMaxLength(100);
             });
+
+            modelBuilder.Entity<CatalogType>(e =>
+            {
+                e.ToTable("CatalogType");
+                e.Property(t => t.Id)
+                    .IsRequired()
+                    .UseHiLo("catalog_type_hilo");
+
+                e.Property(t => t.Type)
+                    .IsRequired()
+                    .HasMaxLength(100);
+            });
+      
         }
 
     }
