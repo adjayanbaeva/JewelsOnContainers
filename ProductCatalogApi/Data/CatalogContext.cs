@@ -59,7 +59,15 @@ namespace ProductCatalogApi.Data
                 e.Property(c => c.Price)
                     .IsRequired();
 
-            })
+                e.HasOne(c => c.CatalogType)
+                    .WithMany()
+                    .HasForeignKey(c => c.CatalogTypeId);
+
+                e.HasOne(c => c.CatalogBrand)
+                    .WithMany()
+                    .HasForeignKey(c => c.CatalogBrand);
+
+            });
       
         }
 
