@@ -24,7 +24,21 @@ namespace ProductCatalogApi.Data
                 context.SaveChanges();
             }
 
+            if (!context.CatalogItems.Any())
+            {
+                context.CatalogItems.AddRange(GetPreConfiguredCatalogItems());
+                context.SaveChanges();
+            }
 
+
+        }
+
+        private static IEnumerable<CatalogItem> GetPreConfiguredCatalogItems()
+        {
+            return new List<CatalogItem>
+            {
+                new CatalogItem {}
+            };
         }
 
         private static IEnumerable<CatalogType> GetPreConfiguredCatalogTypes()
@@ -44,7 +58,7 @@ namespace ProductCatalogApi.Data
                 new CatalogBrand{Brand="Tiffany & Co."},
                 new CatalogBrand{Brand="DeBeers"},
                 new CatalogBrand{Brand="Graff"}
-            }
+            };
         }
     }
 }
