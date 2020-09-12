@@ -19,7 +19,7 @@ namespace ProductCatalogApi
             using(var scope=host.Services.CreateScope())
             {
                 var serviceProviders = scope.ServiceProvider;
-                serviceProviders.GetRequiredService<CatalogContext>();
+                var context = serviceProviders.GetRequiredService<CatalogContext>();
                 CatalogSeed.Seed(context);
             }
             host.Run();

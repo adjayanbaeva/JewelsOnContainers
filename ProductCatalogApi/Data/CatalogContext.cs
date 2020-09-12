@@ -35,7 +35,7 @@ namespace ProductCatalogApi.Data
 
             modelBuilder.Entity<CatalogType>(e =>
             {
-                e.ToTable("CatalogType");
+                e.ToTable("CatalogTypes");
                 e.Property(t => t.Id)
                     .IsRequired()
                     .UseHiLo("catalog_type_hilo");
@@ -65,7 +65,7 @@ namespace ProductCatalogApi.Data
 
                 e.HasOne(c => c.CatalogBrand)
                     .WithMany()
-                    .HasForeignKey(c => c.CatalogBrand);
+                    .HasForeignKey(c => c.CatalogBrandId);
 
             });
       
