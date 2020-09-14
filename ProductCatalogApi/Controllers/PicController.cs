@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
@@ -21,6 +22,9 @@ namespace ProductCatalogApi.Controllers
         public IActionResult GetImage(int id)
         {
             var webroot=_env.WebRootPath;
+            var path=Path.Combine($"webRoot/Pics/", $"Ring{id}.jpg");
+            var buffer=System.IO.File.ReadAllBytes(path);
+            return File(buffer, "image/jpeg");
         }
     }
 }
