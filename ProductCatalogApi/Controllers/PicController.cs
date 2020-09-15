@@ -21,8 +21,8 @@ namespace ProductCatalogApi.Controllers
         [HttpGet("{id}")]
         public IActionResult GetImage(int id)
         {
-            var webroot=_env.WebRootPath;
-            var path=Path.Combine($"webRoot/Pics/", $"Ring{id}.jpg");
+            var webRoot=_env.WebRootPath;
+            var path=Path.Combine($"{webRoot}/Pics/", $"Ring{id}.jpg");
             var buffer=System.IO.File.ReadAllBytes(path);
             return File(buffer, "image/jpeg");
         }
