@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProductCatalogApi.Data;
+using ProductCatalogApi.Domain;
 
 namespace ProductCatalogApi.Controllers
 {
@@ -24,7 +25,13 @@ namespace ProductCatalogApi.Controllers
         public async Task<IActionResult> Items([FromQuery]int pageIndex=0, [FromQuery]int pageSize=6)
         {
             var items = await _context.CatalogItems.Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
+            items = ChangePictureUrl(items);
             return Ok(items);
+        }
+
+        private List<CatalogItem> ChangePictureUrl(List<CatalogItem> items)
+        {
+            throw new NotImplementedException();
         }
     }
 }
