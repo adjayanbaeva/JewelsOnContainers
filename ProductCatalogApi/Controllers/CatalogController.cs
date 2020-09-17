@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using ProductCatalogApi.Data;
 using ProductCatalogApi.Domain;
 
@@ -15,9 +16,11 @@ namespace ProductCatalogApi.Controllers
     public class CatalogController : ControllerBase
     {
         private readonly CatalogContext _context;
-        public CatalogController(CatalogContext context)
+        private readonly IConfiguration _config;
+        public CatalogController(CatalogContext context, IConfiguration config)
         {
             _context = context;
+            _config = config;
         }
 
         [HttpGet]
