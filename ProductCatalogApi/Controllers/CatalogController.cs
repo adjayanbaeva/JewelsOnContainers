@@ -34,7 +34,9 @@ namespace ProductCatalogApi.Controllers
 
         private List<CatalogItem> ChangePictureUrl(List<CatalogItem> items)
         {
-            throw new NotImplementedException();
+            items.ForEach(
+                c => c.PictureUrl = c.PictureUrl.Replace("http://externalcatalogbaseurltobereplaced", _config["ExternalCatalogBaseUrl"]));
+            return items;
         }
     }
 }
