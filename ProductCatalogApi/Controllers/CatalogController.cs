@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using ProductCatalogApi.Data;
 using ProductCatalogApi.Domain;
+using ProductCatalogApi.ViewModels;
 
 namespace ProductCatalogApi.Controllers
 {
@@ -29,6 +30,8 @@ namespace ProductCatalogApi.Controllers
         {
             var items = await _context.CatalogItems.Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
             items = ChangePictureUrl(items);
+
+            var model = new PaginatedItemsViewModel<CatalogItem>
             return Ok(items);
         }
 
@@ -36,6 +39,8 @@ namespace ProductCatalogApi.Controllers
         {
             items.ForEach(
                 c => c.PictureUrl = c.PictureUrl.Replace("http://externalcatalogbaseurltobereplaced", _config["ExternalCatalogBaseUrl"]));
+
+
             return items;
         }
     }
