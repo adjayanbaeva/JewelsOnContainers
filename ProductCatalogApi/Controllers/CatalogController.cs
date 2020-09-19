@@ -28,11 +28,18 @@ namespace ProductCatalogApi.Controllers
         [Route("[action]")]
         public async Task<IActionResult> Items([FromQuery]int pageIndex=0, [FromQuery]int pageSize=6)
         {
+            var itemsCount = await _context.CatalogItems.LongCountAsync();
             var items = await _context.CatalogItems.Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
             items = ChangePictureUrl(items);
 
             var model = new PaginatedItemsViewModel<CatalogItem>
-            return Ok(items);
+            {
+                PageIndex = pageIndex,
+                PageSize = pageSize,
+                Count = itemsCount,
+                Data = items
+            };
+            return Ok(model);
         }
 
         private List<CatalogItem> ChangePictureUrl(List<CatalogItem> items)
