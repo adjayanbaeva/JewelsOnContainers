@@ -1,0 +1,7 @@
+services:
+  productcatalogapi:
+    build:
+      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers
+      dockerfile: ProductCatalogApi/Dockerfile
+    image: productcatalogapi
+version: '3.4'
