@@ -1,20 +1,29 @@
+networks:
+  backend: {}
+  frontend: {}
 services:
-  productcatalogapi:
+  catalog:
     build:
-      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers
-      dockerfile: ProductCatalogApi/Dockerfile
+      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi
+      dockerfile: Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: ProductCatalogApi
       target: base
-    container_name: ProductCatalogApi
+    container_name: jewelscatalogapi
+    depends_on:
+    - mssqlserver
     entrypoint: tail -f /dev/null
     environment:
-      ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      DatabaseName: CatalogDb
+      DatabasePassword: ProductApi(!)
+      DatabaseServer: mssqlserver
+      DatabaseUser: sa
+      ExternalCatalogBaseUrl: http://localhost:6800
       NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
-    image: productcatalogapi:dev
+    image: jewels/catalogapi:dev
     labels:
       com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
         --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/ProductCatalogApi.dll"'
@@ -22,8 +31,12 @@ services:
         dotnet); then kill $$PID; fi"
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      backend: {}
+      frontend: {}
     ports:
-    - target: 80
+    - published: 6800
+      target: 80
     tty: true
     volumes:
     - C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi:/app:rw
@@ -32,5 +45,16 @@ services:
     - C:\Users\Ainur Dzhaianbaeva\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
     - C:\Microsoft\Xamarin\NuGet:/root/.nuget/fallbackpackages:ro
     - C:\Users\Ainur Dzhaianbaeva\.nuget\packages:/root/.nuget/packages:ro
-    - C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers:/src:rw
+    - C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi:/src:rw
+  mssqlserver:
+    container_name: jewelssqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: ProductApi(!)
+    image: microsoft/mssql-server-linux:latest
+    networks:
+      backend: {}
+    ports:
+    - published: 1448
+      target: 1433
 version: '3.4'

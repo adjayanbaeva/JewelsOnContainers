@@ -1,11 +1,36 @@
+networks:
+  backend: {}
+  frontend: {}
 services:
-  productcatalogapi:
+  catalog:
     build:
-      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers
-      dockerfile: ProductCatalogApi/Dockerfile
+      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi
+      dockerfile: Dockerfile
+    container_name: jewelscatalogapi
+    depends_on:
+    - mssqlserver
     environment:
-      ASPNETCORE_ENVIRONMENT: Development
-    image: productcatalogapi
+      DatabaseName: CatalogDb
+      DatabasePassword: ProductApi(!)
+      DatabaseServer: mssqlserver
+      DatabaseUser: sa
+      ExternalCatalogBaseUrl: http://localhost:6800
+    image: jewels/catalogapi
+    networks:
+      backend: null
+      frontend: null
     ports:
-    - target: 80
+    - published: 6800
+      target: 80
+  mssqlserver:
+    container_name: jewelssqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: ProductApi(!)
+    image: microsoft/mssql-server-linux:latest
+    networks:
+      backend: null
+    ports:
+    - published: 1448
+      target: 1433
 version: '3.4'
