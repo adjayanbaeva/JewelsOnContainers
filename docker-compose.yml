@@ -16,5 +16,29 @@ services:
       DatabaseName: CatalogDb
       DatabaseUser: ad
       DatabasePassword: offByBit
-      ExternalCatalogBaseUrl: http://localhost:51303
+      ExternalCatalogBaseUrl: http://localhost:6800
+    ports:
+      - "6800:80"
+    container_name: jewelscatalogapi
+    networks:
+      -backend
+      -frontend
+    depends_on:
+      -mssqlserver
+
+mssqlserver:
+  image: "microsoft/mssql-server-linux"
+  environment:
+    ACCEPT_EULA: Y
+    AD_PASSWORD: offByBit
+  ports:
+    - "1448:1433"
+  container_name: jewelssqlserver
+  networks:
+    - backend
+
+
+
+
+
 
