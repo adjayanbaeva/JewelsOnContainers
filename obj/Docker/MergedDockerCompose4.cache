@@ -1,0 +1,16 @@
+networks:
+  backend: {}
+  frontend: {}
+services:
+  catalog:
+    build:
+      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi
+      dockerfile: Dockerfile
+    environment:
+      DatabaseName: CatalogDb
+      DatabasePassword: offByBit
+      DatabaseServer: mssqlserver
+      DatabaseUser: ad
+      ExternalCatalogBaseUrl: http://localhost:51303
+    image: jewels/catalogapi
+version: '3.4'

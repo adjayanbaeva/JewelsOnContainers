@@ -1,8 +1,20 @@
 version: '3.4'
 
+networks:
+  frontend:
+  backend:
+  
+
 services:
-  productcatalogapi:
-    image: ${DOCKER_REGISTRY-}productcatalogapi
+  catalog:
+    image: jewels/catalogapi
     build:
-      context: .
-      dockerfile: ProductCatalogApi/Dockerfile
+      context: .\ProductCatalogApi
+      dockerfile: Dockerfile
+    environment:
+      DatabaseServer: mssqlserver
+      DatabaseName: CatalogDb
+      DatabaseUser: ad
+      DatabasePassword: offByBit
+      ExternalCatalogBaseUrl: http://localhost:51303
+

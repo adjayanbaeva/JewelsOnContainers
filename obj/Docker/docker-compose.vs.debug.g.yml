@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  productcatalogapi:
-    image: productcatalogapi:dev
+  catalog:
+    image: jewels/catalogapi:dev
     container_name: ProductCatalogApi
     build:
       target: base
@@ -15,7 +15,7 @@ services:
       - NUGET_FALLBACK_PACKAGES=/root/.nuget/fallbackpackages
     volumes:
       - C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi:/app
-      - C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers:/src
+      - C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi:/src
       - C:\Users\Ainur Dzhaianbaeva\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\Ainur Dzhaianbaeva\.nuget\packages\:/root/.nuget/packages:ro
       - C:\Microsoft\Xamarin\NuGet\:/root/.nuget/fallbackpackages:ro
