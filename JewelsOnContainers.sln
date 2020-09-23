@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalogApi", "Produc
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C9835EA5-D08B-4174-B41E-A38160C1AAA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVC", "WebMVC\WebMVC.csproj", "{ADDB404F-2664-4A9A-9908-5101EC4B5E05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C9835EA5-D08B-4174-B41E-A38160C1AAA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9835EA5-D08B-4174-B41E-A38160C1AAA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9835EA5-D08B-4174-B41E-A38160C1AAA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADDB404F-2664-4A9A-9908-5101EC4B5E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDB404F-2664-4A9A-9908-5101EC4B5E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDB404F-2664-4A9A-9908-5101EC4B5E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDB404F-2664-4A9A-9908-5101EC4B5E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +41,7 @@ Global
 		{D0B1B45C-AF77-4F92-ABAE-5881510910A1} = {1CCDF56C-CB11-4174-8C8B-6E612E201029}
 		{A266AF27-99B1-42BA-B38F-8A9CEBE56FBE} = {1CCDF56C-CB11-4174-8C8B-6E612E201029}
 		{17A607D0-30C6-4300-8984-096F9063F421} = {D0B1B45C-AF77-4F92-ABAE-5881510910A1}
+		{ADDB404F-2664-4A9A-9908-5101EC4B5E05} = {A266AF27-99B1-42BA-B38F-8A9CEBE56FBE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3475D248-CF35-447E-9906-21723327E2DE}
