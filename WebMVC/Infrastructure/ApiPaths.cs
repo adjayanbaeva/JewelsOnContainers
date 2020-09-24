@@ -7,5 +7,12 @@ namespace WebMVC.Infrastructure
 {
     public class ApiPaths
     {
+        public static class Catalog
+        {
+            public static string GetAllCatalogItems(string baseUri, int page, int take)
+            {
+                return $"{baseUri}items?pageIndex={page}&pageSize={take}";
+            }
+        }
     }
 }
