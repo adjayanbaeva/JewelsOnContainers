@@ -21,5 +21,9 @@ namespace WebMVC.Infrastructure
             T item,
             string authorizationToken = null,
             string authorizationMethod = "Bearer");
+
+        Task<HttpResponseMessage> DeleteAsync(string uri,
+            string authorizationToken = null,
+            string authorizationMethod = "Bearer");
     }
 }
