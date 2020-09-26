@@ -8,6 +8,12 @@ namespace WebMVC.Infrastructure
 {
     public class CustomHttpClient : IHttpClient
     {
+        private readonly HttpClient _client;
+        public CustomHttpClient()
+        {
+            _client = new HttpClient();
+        }
+
         public Task<HttpResponseMessage> DeleteAsync(string uri, string authorizationToken = null, string authorizationMethod = "Bearer")
         {
             throw new NotImplementedException();
