@@ -19,9 +19,15 @@ namespace WebMVC.Infrastructure
             throw new NotImplementedException();
         }
 
-        public Task<string> GetStringAsync(string uri, string authorizationToken = null, string authorizationMethod = "Bearer")
+        public async Task<string> GetStringAsync(string uri, string authorizationToken = null, string authorizationMethod = "Bearer")
         {
-            throw new NotImplementedException();
+            var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
+            if(authorizationToken !=null)
+            {
+                //Do this later
+            }
+            var response = await _client.SendAsync(requestMessage);
+            return await response.Content.ReadAsStringAsync();
         }
 
         public Task<HttpResponseMessage> PostAsync<T>(string uri, T item, string authorizarionToken = null, string authorizationMethod = "Bearer")
