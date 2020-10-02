@@ -10,6 +10,7 @@ namespace WebMVC.Controllers
     {
         public IActionResult Index()
         {
+            var itemsOnPage = 10;
             return View();
         }
     }
