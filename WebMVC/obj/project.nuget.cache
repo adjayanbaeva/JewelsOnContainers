@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1XTIrkN8sGB86PNRX8SPXZlDFWtV3SKcETnamlk8ec3dY8sf0AohAjLKEdg8hx8cEn9IkfBSLNOaRrbrM1Gxcw==",
+  "dgSpecHash": "bgBI1VsjBKIldOykDQdl4fzGZukSzI6elwvehaQdYyDETy7tEfQ/A5clGEU84gMHMyeEAWsnUJex41xdQGj7KQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ainur Dzhaianbaeva\\Documents\\Kal Academy\\JewelsOnContainers\\WebMVC\\WebMVC.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }
