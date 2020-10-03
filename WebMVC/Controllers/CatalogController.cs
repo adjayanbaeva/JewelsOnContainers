@@ -15,10 +15,12 @@ namespace WebMVC.Controllers
             _service = service;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int page)
         {
             var itemsOnPage = 10;
-            return View();
+
+            var catalog = await _service.GetCatalogItemsAsync(page, itemsOnPage);
+            return View(catalog);
         }
     }
 }
