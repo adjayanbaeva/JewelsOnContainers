@@ -27,7 +27,7 @@ namespace WebMVC
         {
             services.AddControllersWithViews();
             services.AddSingleton<IHttpClient, CustomHttpClient>();
-            services.AddTransient<ICatalogService, ICatalogService>();
+            services.AddTransient<ICatalogService, CatalogService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
