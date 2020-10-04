@@ -57,4 +57,43 @@ services:
     ports:
     - published: 1448
       target: 1433
+  webmvc:
+    build:
+      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\webmvc
+      dockerfile: Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebMVC
+      target: base
+    container_name: webshop
+    depends_on:
+    - catalog
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      CatalogUrl: http://catalog
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: jewels/webmvc:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/WebMVC.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      frontend: {}
+    ports:
+    - published: 5210
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\webmvc:/app:rw
+    - C:\Users\Ainur Dzhaianbaeva\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Ainur Dzhaianbaeva\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Ainur Dzhaianbaeva\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Microsoft\Xamarin\NuGet:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Ainur Dzhaianbaeva\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\webmvc:/src:rw
 version: '3.4'

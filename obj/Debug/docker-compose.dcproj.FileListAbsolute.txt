@@ -14,3 +14,9 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\P
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\obj\Debug\docker-compose.dcprojAssemblyReference.cache
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\WebMVC.Views.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\WebMVC.Views.pdb
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\WebMVC.exe
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\WebMVC.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\WebMVC.pdb
