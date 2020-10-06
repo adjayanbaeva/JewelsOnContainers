@@ -37,3 +37,7 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\WebMVC.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\WebMVC.pdb
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\WebMVC.genruntimeconfig.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\About.cshtml.g.cs
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\_pagination.cshtml.g.cs
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\_product.cshtml.g.cs
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Header.cshtml.g.cs

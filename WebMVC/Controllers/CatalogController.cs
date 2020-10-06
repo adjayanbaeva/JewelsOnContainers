@@ -15,7 +15,7 @@ namespace WebMVC.Controllers
             _service = service;
         }
 
-        public async Task<IActionResult> Index(int page)
+        public async Task<IActionResult> Index(int? page)
         {
             var itemsOnPage = 10;
 
