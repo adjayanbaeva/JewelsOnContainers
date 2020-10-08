@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebMVC.Services;
+using WebMVC.ViewModels;
 
 namespace WebMVC.Controllers
 {
@@ -19,7 +20,17 @@ namespace WebMVC.Controllers
         {
             var itemsOnPage = 10;
 
-            var catalog = await _service.GetCatalogItemsAsync(page, itemsOnPage);
+            var catalog = await _service.GetCatalogItemsAsync(page ?? 0, itemsOnPage);
+            var vm = new CatalogIndexViewModel
+            {
+                CatalogItems = catalog.Data,
+                PaginationInfo = new PaginationInfo
+                {
+
+                }
+
+
+            };
             return View(catalog);
         }
     }
