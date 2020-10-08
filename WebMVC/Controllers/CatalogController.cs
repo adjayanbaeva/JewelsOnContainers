@@ -26,12 +26,15 @@ namespace WebMVC.Controllers
                 CatalogItems = catalog.Data,
                 PaginationInfo = new PaginationInfo
                 {
-
+                    ActualPage = page ?? 0,
+                    ItemsPerPage = itemsOnPage,
+                    TotalItems = catalog.Count,
+                    TotalPages = (int)Math.Ceiling((decimal)catalog.Count / itemsOnPage)
                 }
-
+                
 
             };
-            return View(catalog);
+            return View(vm);
         }
     }
 }
