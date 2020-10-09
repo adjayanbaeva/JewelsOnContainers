@@ -59,5 +59,14 @@ namespace ProductCatalogApi.Controllers
             var items = await _context.CatalogTypes.ToListAsync();
             return Ok(items);
         }
+
+        [HttpGet]
+        [Route("[action]")]
+
+        public async Task<IActionResult> CatalogBrands()
+        {
+            var items = await _context.CatalogBrands.ToListAsync();
+            return Ok(items);
+        }
     }
 }
