@@ -13,6 +13,11 @@ namespace WebMVC.Infrastructure
             {
                 return $"{baseUri}items?pageIndex={page}&pageSize={take}";
             }
+
+            public static string GetAllTypes(string baseUri)
+            {
+                return $"{baseUri}catalogtypes";
+            }
         }
     }
 }
