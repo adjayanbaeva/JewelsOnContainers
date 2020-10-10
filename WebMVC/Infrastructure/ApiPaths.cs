@@ -18,6 +18,11 @@ namespace WebMVC.Infrastructure
             {
                 return $"{baseUri}catalogtypes";
             }
+
+            public static string GetAllBrands(string baseUri)
+            {
+                return $"{baseUri}catalogbrands";
+            }
         }
     }
 }
