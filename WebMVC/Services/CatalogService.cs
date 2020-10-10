@@ -31,7 +31,17 @@ namespace WebMVC.Services
         {
             var typeUri = ApiPaths.Catalog.GetAllBrands(_baseUri);
             var dataString = await _client.GetStringAsync(typeUri);
-            
+            var items = new List<SelectListItem>
+            {
+                new SelectListItem
+                {
+                    Value = null,
+                    Text = "All",
+                    Selected = true
+                }
+                
+
+            }
         }
 
         public Task<IEnumerable<SelectListItem>> GetTypesAsync()
