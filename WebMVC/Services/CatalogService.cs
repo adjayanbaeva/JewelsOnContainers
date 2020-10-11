@@ -28,9 +28,9 @@ namespace WebMVC.Services
             return JsonConvert.DeserializeObject<Catalog>(dataString);
         }
 
-        public async Task<IEnumerable<SelectListItem>> GetBrandsAsync()
+        public async Task<IEnumerable<SelectListItem>> GetTypesAsync()
         {
-            var typeUri = ApiPaths.Catalog.GetAllBrands(_baseUri);
+            var typeUri = ApiPaths.Catalog.GetAllTypes(_baseUri);
             var dataString = await _client.GetStringAsync(typeUri);
             var items = new List<SelectListItem>
             {
@@ -53,9 +53,9 @@ namespace WebMVC.Services
             return items;
         }
 
-        public Task<IEnumerable<SelectListItem>> GetTypesAsync()
+        public Task<IEnumerable<SelectListItem>> GetBrandsAsync()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
