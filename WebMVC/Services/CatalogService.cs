@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,9 +40,17 @@ namespace WebMVC.Services
                     Text = "All",
                     Selected = true
                 }
-                
-
+            };
+            var types = JArray.Parse(dataString);
+            foreach (var type in types)
+            {
+                items.Add(new SelectListItem
+                {
+                    Value = type.Value<string>("id"),
+                    Text = type.Value<string>("type")
+                });
             }
+            return items;
         }
 
         public Task<IEnumerable<SelectListItem>> GetTypesAsync()
