@@ -53,9 +53,29 @@ namespace WebMVC.Services
             return items;
         }
 
-        public Task<IEnumerable<SelectListItem>> GetBrandsAsync()
+        public async Task<IEnumerable<SelectListItem>> GetBrandsAsync()
         {
-            
+            var brandUri = ApiPaths.Catalog.GetAllBrands(_baseUri);
+            var dataString = await _client.GetStringAsync(brandUri);
+            var items = new List<SelectListItem>
+            {
+                new SelectListItem
+                {
+                    Value = null,
+                    Text = "All",
+                    Selected = true
+                }
+            };
+            var brands = JArray.Parse(dataString);
+            foreach (var brand in brands)
+            {
+                items.Add(new SelectListItem
+                {
+                    Value = brand.Value<string>("id"),
+                    Text = brand.Value<string>("brand")
+                });
+            }
+            return items;
         }
     }
 }
