@@ -33,10 +33,6 @@ namespace WebMVC.Controllers
                 },
                 Brands = await _service.GetBrandsAsync(),
                 Types = await _service.GetTypesAsync()
-
-
-                
-
             };
             return View(vm);
         }

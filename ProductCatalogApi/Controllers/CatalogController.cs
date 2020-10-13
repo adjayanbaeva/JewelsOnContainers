@@ -42,6 +42,17 @@ namespace ProductCatalogApi.Controllers
             return Ok(model);
         }
 
+        [HttpGet]
+        [Route("[action]/type/{catalogTypeId}/brand/catalogBrandId}")]
+        public async Task<IActionResult> Items(
+            int? catalogTypeId,
+            int? catalogBrandId,
+            [FromQuery]int pageIndex = 0,
+            [FromQuery]int pageSize = 6)
+        {
+
+        }
+
         private List<CatalogItem> ChangePictureUrl(List<CatalogItem> items)
         {
             items.ForEach(
