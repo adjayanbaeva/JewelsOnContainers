@@ -21,9 +21,9 @@ namespace WebMVC.Services
             _client = client;
         }
 
-        public async Task<Catalog> GetCatalogItemsAsync(int page, int size)
+        public async Task<Catalog> GetCatalogItemsAsync(int page, int size, int? brand, int? type)
         {
-            var catalogItemsUri = ApiPaths.Catalog.GetAllCatalogItems(_baseUri, page, size);
+            var catalogItemsUri = ApiPaths.Catalog.GetAllCatalogItems(_baseUri, page, size, brand, type);
             var dataString = await _client.GetStringAsync(catalogItemsUri);
             return JsonConvert.DeserializeObject<Catalog>(dataString);
         }
