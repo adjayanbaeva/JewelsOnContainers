@@ -29,7 +29,7 @@ namespace ProductCatalogApi.Controllers
         public async Task<IActionResult> Items([FromQuery]int pageIndex=0, [FromQuery]int pageSize=6)
         {
             var itemsCount = await _context.CatalogItems.LongCountAsync();
-            var items = await _context.CatalogItems.Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
+            var items = await _context.CatalogItems.OrderBy(c => c.Name).Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
             items = ChangePictureUrl(items);
 
             var model = new PaginatedItemsViewModel<CatalogItem>
