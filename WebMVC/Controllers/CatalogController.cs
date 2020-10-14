@@ -16,11 +16,11 @@ namespace WebMVC.Controllers
             _service = service;
         }
 
-        public async Task<IActionResult> Index(int? page)
+        public async Task<IActionResult> Index(int? page, int? brandFilterApplied, int? typeFilterApplied)
         {
             var itemsOnPage = 10;
 
-            var catalog = await _service.GetCatalogItemsAsync(page ?? 0, itemsOnPage);
+            var catalog = await _service.GetCatalogItemsAsync(page ?? 0, itemsOnPage, brandFilterApplied, typeFilterApplied);
             var vm = new CatalogIndexViewModel
             {
                 CatalogItems = catalog.Data,
