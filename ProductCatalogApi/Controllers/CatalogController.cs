@@ -59,6 +59,24 @@ namespace ProductCatalogApi.Controllers
             {
                 root = root.Where(c => c.CatalogBrandId == catalogBrandId);
             }
+
+            var itemsCount = await root.LongCountAsync();
+
+            var items = await root
+                                .OrderBy(c => c.Name)
+                                .Skip(pageIndex * pageSize)
+                                .Take(pageSize)
+                                .ToListAsync();
+            items = ChangePictureUrl(items);
+
+            var model = new PaginatedItemsViewModel<CatalogItem>
+            {
+                PageIndex = pageIndex,
+                PageSize = pageSize,
+                Count = itemsCount,
+                Data = items
+            };
+            return Ok(model);
         }
 
         private List<CatalogItem> ChangePictureUrl(List<CatalogItem> items)
