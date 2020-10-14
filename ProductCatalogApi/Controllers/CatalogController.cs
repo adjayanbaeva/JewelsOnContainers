@@ -43,7 +43,7 @@ namespace ProductCatalogApi.Controllers
         }
 
         [HttpGet]
-        [Route("[action]/type/{catalogTypeId}/brand/catalogBrandId}")]
+        [Route("[action]/type/{catalogTypeId}/brand/{catalogBrandId}")]
         public async Task<IActionResult> Items(
             int? catalogTypeId,
             int? catalogBrandId,
