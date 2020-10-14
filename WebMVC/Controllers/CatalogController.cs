@@ -32,7 +32,9 @@ namespace WebMVC.Controllers
                     TotalPages = (int)Math.Ceiling((decimal)catalog.Count / itemsOnPage)
                 },
                 Brands = await _service.GetBrandsAsync(),
-                Types = await _service.GetTypesAsync()
+                Types = await _service.GetTypesAsync(),
+                BrandFilterApplied = brandFilterApplied ?? 0,
+                TypesFilterApplied = typeFilterApplied ?? 0
             };
             return View(vm);
         }
