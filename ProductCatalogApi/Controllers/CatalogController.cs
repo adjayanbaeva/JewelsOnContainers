@@ -51,7 +51,14 @@ namespace ProductCatalogApi.Controllers
             [FromQuery]int pageSize = 6)
         {
             var root = (IQueryable<CatalogItem>)_context.CatalogItems;
-
+            if (catalogTypeId.HasValue)
+            {
+                root = root.Where(c => c.CatalogTypeId == catalogTypeId);
+            }
+            if (catalogBrandId.HasValue)
+            {
+                root = root.Where(c => c.CatalogBrandId == catalogBrandId);
+            }
         }
 
         private List<CatalogItem> ChangePictureUrl(List<CatalogItem> items)
