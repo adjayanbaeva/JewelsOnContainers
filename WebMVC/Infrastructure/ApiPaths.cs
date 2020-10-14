@@ -12,8 +12,14 @@ namespace WebMVC.Infrastructure
             public static string GetAllCatalogItems(string baseUri, int page, int take, int? brand, int? type)
             {
                 var filterQueries = string.Empty;
+                if(brand.HasValue || type.HasValue)
+                {
+                    var brandQueries = (brand.HasValue) ? brand.Value.ToString() : "null";
+                    var typeQueries = (type.HasValue) ? type.Value.ToString() : "null";
+                    filterQueries = $"/type/{typeQueries}/brand/{brandQueries}";
+                }
                 
-                return $"{baseUri}items?pageIndex={page}&pageSize={take}";
+                return $"{baseUri}items{filterQueries}?pageIndex={page}&pageSize={take}";
             }
 
             public static string GetAllTypes(string baseUri)
