@@ -50,6 +50,7 @@ namespace ProductCatalogApi.Controllers
             [FromQuery]int pageIndex = 0,
             [FromQuery]int pageSize = 6)
         {
+            var root = (IQueryable<CatalogItem>)_context.CatalogItems;
 
         }
 
