@@ -34,6 +34,16 @@ namespace ProductCatalogApi
             var connectionString = $"Server={server};Database={database};User Id={user};Password={password}";
             services.AddDbContext<CatalogContext>(options=>
                 options.UseSqlServer(connectionString));
+
+            services.AddSwaggerGen(options => {
+                options.SwaggerDoc("V1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "JewelsOnContainers - Product Catalog API",
+                    Version = "v1",
+                    Description = "Product catalog microservice"
+                });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
