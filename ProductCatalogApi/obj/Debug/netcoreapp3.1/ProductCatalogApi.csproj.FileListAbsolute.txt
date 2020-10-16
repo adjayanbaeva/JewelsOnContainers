@@ -29,8 +29,6 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCata
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.AssemblyInfoInputs.cache
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.AssemblyInfo.cs
-C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.csproj.CoreCompileInputs.cache
-C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.RazorTargetAssemblyInfo.cache
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.csproj.CopyComplete
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\staticwebassets\ProductCatalogApi.StaticWebAssets.Manifest.cache
