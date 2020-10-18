@@ -20,3 +20,7 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\W
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\WebMVC.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\WebMVC.pdb
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.OpenApi.dll

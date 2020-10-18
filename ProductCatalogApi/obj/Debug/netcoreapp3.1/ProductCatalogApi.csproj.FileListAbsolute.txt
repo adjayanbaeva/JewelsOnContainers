@@ -37,3 +37,10 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCata
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.pdb
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.genruntimeconfig.cache
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.csprojAssemblyReference.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.csproj.CoreCompileInputs.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi\obj\Debug\netcoreapp3.1\ProductCatalogApi.MvcApplicationPartsAssemblyInfo.cache

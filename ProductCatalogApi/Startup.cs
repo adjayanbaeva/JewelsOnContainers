@@ -36,7 +36,7 @@ namespace ProductCatalogApi
                 options.UseSqlServer(connectionString));
 
             services.AddSwaggerGen(options => {
-                options.SwaggerDoc("V1", new Microsoft.OpenApi.Models.OpenApiInfo
+                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
                     Title = "JewelsOnContainers - Product Catalog API",
                     Version = "v1",
@@ -61,7 +61,7 @@ namespace ProductCatalogApi
                 .UseSwaggerUI(e =>
                 {
                     e.SwaggerEndpoint($"/swagger/v1/swagger.json", "ProductCatalogAPI V1");
-                })
+                });
 
             app.UseEndpoints(endpoints =>
             {
