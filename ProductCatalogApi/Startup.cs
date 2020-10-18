@@ -57,6 +57,11 @@ namespace ProductCatalogApi
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSwagger()
+                .UseSwaggerUI(e =>
+                {
+                    e.SwaggerEndpoint($"/swagger/v1/swagger.json", "ProductCatalogAPI V1");
+                })
 
             app.UseEndpoints(endpoints =>
             {
