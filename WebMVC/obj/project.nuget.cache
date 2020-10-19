@@ -1,11 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "bgBI1VsjBKIldOykDQdl4fzGZukSzI6elwvehaQdYyDETy7tEfQ/A5clGEU84gMHMyeEAWsnUJex41xdQGj7KQ==",
+  "dgSpecHash": "ezgosVQJKouS/GqjDf6APIjpks5LhxkoR+hcTJLW+46pnqVWVr3V6ljg4+qR+Qn2UmrY7m2txNMQB9Ir+7srgQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ainur Dzhaianbaeva\\Documents\\Kal Academy\\JewelsOnContainers\\WebMVC\\WebMVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\3.1.9\\microsoft.aspnetcore.authentication.openidconnect.3.1.9.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\5.5.0\\microsoft.identitymodel.jsonwebtokens.5.5.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.identitymodel.logging\\5.5.0\\microsoft.identitymodel.logging.5.5.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.identitymodel.protocols\\5.5.0\\microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\5.5.0\\microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.5.0\\microsoft.identitymodel.tokens.5.5.0.nupkg.sha512",
     "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
-    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\system.identitymodel.tokens.jwt\\5.5.0\\system.identitymodel.tokens.jwt.5.5.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

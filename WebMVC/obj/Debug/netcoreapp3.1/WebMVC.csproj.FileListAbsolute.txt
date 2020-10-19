@@ -29,8 +29,6 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\bin\
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\bin\Debug\netcoreapp3.1\WebMVC.Views.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\bin\Debug\netcoreapp3.1\WebMVC.Views.pdb
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\WebMVC.csproj.CoreCompileInputs.cache
-C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\WebMVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\Index.cshtml.g.cs
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\WebMVC.Views.pdb
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\WebMVC.csproj.CopyComplete
@@ -41,3 +39,4 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\_pagination.cshtml.g.cs
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\_product.cshtml.g.cs
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Header.cshtml.g.cs
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
