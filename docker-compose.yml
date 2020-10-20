@@ -66,7 +66,10 @@ services:
     image: jewels/webmvc
     container_name: webshop
     environment:
+      ASPNETCORE_ENVIRONMENT: Development
       CatalogUrl: http://catalog
+      IdentityUrl: http://192.168.1.34:6700
+      CallBackUrl: http://localhost:5210
     ports:
       - "5210:80"
     networks:

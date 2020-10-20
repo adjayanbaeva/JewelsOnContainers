@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
 using System.Diagnostics;
+using WebMVC.Controllers;
 
 namespace WebMvc.Controllers
 {

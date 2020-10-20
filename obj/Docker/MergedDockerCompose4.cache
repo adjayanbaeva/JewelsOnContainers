@@ -1,0 +1,79 @@
+networks:
+  backend: {}
+  frontend: {}
+services:
+  catalog:
+    build:
+      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\ProductCatalogApi
+      dockerfile: Dockerfile
+    container_name: jewelscatalogapi
+    depends_on:
+      mssqlserver:
+        condition: service_started
+    environment:
+      DatabaseName: CatalogDb
+      DatabasePassword: ProductApi(!)
+      DatabaseServer: mssqlserver
+      DatabaseUser: sa
+      ExternalCatalogBaseUrl: http://localhost:6800
+    image: jewels/catalogapi
+    networks:
+      backend: null
+      frontend: null
+    ports:
+    - published: 6800
+      target: 80
+  mssqlserver:
+    container_name: jewelssqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: ProductApi(!)
+    image: microsoft/mssql-server-linux:latest
+    networks:
+      backend: null
+    ports:
+    - published: 1448
+      target: 1433
+  tokenserver:
+    build:
+      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\TokenServiceApi
+      dockerfile: Dockerfile
+    container_name: tokenserviceapi
+    depends_on:
+      mssqlserver:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      MvcClient: http://localhost:5210
+    image: jewels/tokenapi
+    logging:
+      driver: json-file
+      options:
+        max-file: '10'
+        max-size: 200k
+    networks:
+      backend: null
+      frontend: null
+    ports:
+    - published: 6700
+      target: 80
+  webmvc:
+    build:
+      context: C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\webmvc
+      dockerfile: Dockerfile
+    container_name: webshop
+    depends_on:
+      catalog:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      CallBackUrl: http://localhost:5210
+      CatalogUrl: http://catalog
+      IdentityUrl: http://192.168.1.34:6700
+    image: jewels/webmvc
+    networks:
+      frontend: null
+    ports:
+    - published: 5210
+      target: 80
+version: '3.4'

@@ -24,3 +24,14 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\S
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.OpenApi.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\TokenServiceApi.Views.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\TokenServiceApi.Views.pdb
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\TokenServiceApi.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\TokenServiceApi.pdb
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
