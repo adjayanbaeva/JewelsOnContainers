@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMVC", "WebMVC\WebMVC.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenServiceApi", "TokenServiceApi\TokenServiceApi.csproj", "{56A8961A-99A0-402C-A8B0-8C12DD7D88E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartApi", "CartApi\CartApi.csproj", "{B75EC19D-E513-49A8-9551-87F4A608ADFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{56A8961A-99A0-402C-A8B0-8C12DD7D88E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56A8961A-99A0-402C-A8B0-8C12DD7D88E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56A8961A-99A0-402C-A8B0-8C12DD7D88E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75EC19D-E513-49A8-9551-87F4A608ADFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75EC19D-E513-49A8-9551-87F4A608ADFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75EC19D-E513-49A8-9551-87F4A608ADFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75EC19D-E513-49A8-9551-87F4A608ADFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{17A607D0-30C6-4300-8984-096F9063F421} = {D0B1B45C-AF77-4F92-ABAE-5881510910A1}
 		{ADDB404F-2664-4A9A-9908-5101EC4B5E05} = {A266AF27-99B1-42BA-B38F-8A9CEBE56FBE}
 		{56A8961A-99A0-402C-A8B0-8C12DD7D88E4} = {D0B1B45C-AF77-4F92-ABAE-5881510910A1}
+		{B75EC19D-E513-49A8-9551-87F4A608ADFF} = {D0B1B45C-AF77-4F92-ABAE-5881510910A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3475D248-CF35-447E-9906-21723327E2DE}
