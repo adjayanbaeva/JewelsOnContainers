@@ -7,5 +7,10 @@ namespace CartApi.Models
 {
     public interface ICartRepositary
     {
+        Task<Cart> GetCartAsync(string cartId);
+        IEnumerable<string> GetUsers();
+        Task<Cart> UpdateCartAsync(Cart basket);
+        Task<bool> DeleteCartAsync(string id);
+
     }
 }
