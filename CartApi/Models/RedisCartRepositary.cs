@@ -1,4 +1,5 @@
-﻿using StackExchange.Redis;
+﻿using Newtonsoft.Json;
+using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,15 @@ namespace CartApi.Models
             throw new NotImplementedException();
         }
 
-        public Task<Cart> GetCartAsync(string cartId)
+        public async Task<Cart> GetCartAsync(string cartId)
         {
-            throw new NotImplementedException();
+            var data = await _database.StringGetAsync(cartId);
+            if(data.IsNullOrEmpty)
+            {
+                return null;
+            }
+
+            return JsonConvert.DeserializeObject<Cart>(data);
         }
 
         public IEnumerable<string> GetUsers()
