@@ -38,6 +38,12 @@ namespace CartApi.Models
             throw new NotImplementedException();
         }
 
+        private IServer GetServer()
+        {
+            var endpoint = _redis.GetEndPoints();
+            return _redis.GetServer(endpoint.First());
+        }
+
         public async Task<Cart> UpdateCartAsync(Cart basket)
         {
             var created = await _database.StringSetAsync(basket.BuyerId,
