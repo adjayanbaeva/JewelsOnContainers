@@ -17,9 +17,9 @@ namespace CartApi.Models
             _redis = redis;
             _database = _redis.GetDatabase();
         }
-        public Task<bool> DeleteCartAsync(string id)
+        public async Task<bool> DeleteCartAsync(string id)
         {
-            throw new NotImplementedException();
+            return await _database.KeyDeleteAsync(id);
         }
 
         public async Task<Cart> GetCartAsync(string cartId)
