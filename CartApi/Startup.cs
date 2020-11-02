@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using StackExchange.Redis;
 
 namespace CartApi
 {
@@ -28,6 +29,13 @@ namespace CartApi
         {
             services.AddControllers();
             services.AddTransient<ICartRepositary, RedisCartRepositary>();
+            services.AddSingleton<ConnectionMultiplexer>(cm =>
+            {
+                var configuration = ConfigurationOptions.Parse(Configuration["ConnectionString"], true);
+                configuration.ResolveDns = true;
+                configuration.AbortOnConnectFail = false;
+                return ConnectionMultiplexer.Connect(configuration);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
