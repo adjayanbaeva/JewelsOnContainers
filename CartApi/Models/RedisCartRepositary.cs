@@ -38,9 +38,17 @@ namespace CartApi.Models
             throw new NotImplementedException();
         }
 
-        public Task<Cart> UpdateCartAsync(Cart basket)
+        public async Task<Cart> UpdateCartAsync(Cart basket)
         {
-            throw new NotImplementedException();
+            var created = await _database.StringSetAsync(basket.BuyerId,
+                JsonConvert.SerializeObject(basket));
+
+            if(!created)
+            {
+                return null;
+            }
+
+            return await GetCartAsync(basket.BuyerId);
         }
     }
 }
