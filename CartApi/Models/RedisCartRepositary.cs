@@ -35,7 +35,9 @@ namespace CartApi.Models
 
         public IEnumerable<string> GetUsers()
         {
-            throw new NotImplementedException();
+            var server = GetServer();
+            var data = server.Keys();
+            return data?.Select(k => k.ToString());
         }
 
         private IServer GetServer()
