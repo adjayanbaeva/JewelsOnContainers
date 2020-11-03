@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using CartApi.Models;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +17,14 @@ namespace CartApi.Controllers
         public CartController(ICartRepositary repository)
         {
             _repository = repository;
+        }
+
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(Cart), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> Get(string id)
+        {
+            var basket = await _repository.GetCartAsync(id);
+            return Ok(basket);
         }
     }
 }
