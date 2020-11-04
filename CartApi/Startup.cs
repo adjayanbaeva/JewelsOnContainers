@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CartApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,7 +37,25 @@ namespace CartApi
                 configuration.AbortOnConnectFail = false;
                 return ConnectionMultiplexer.Connect(configuration);
             });
+            ConfigureAuthService(services);
         }
+
+        private void ConfigureAuthService(IServiceCollection services)
+        {
+            var identityUrl = Configuration["IdentityUrl"];
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = identityUrl;
+                options.RequireHttpsMetadata = false;
+                options.Audience = "basket";
+            });
+        }
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -49,6 +68,8 @@ namespace CartApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
