@@ -34,5 +34,11 @@ namespace CartApi.Controllers
             var basket = await _repository.UpdateCartAsync(value);
             return Ok(basket);
         }
+
+        [HttpDelete("{id}")]
+        public async void Delete(string id)
+        {
+            await _repository.DeleteCartAsync(id);
+        }
     }
 }
