@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using StackExchange.Redis;
 
 namespace CartApi
@@ -49,6 +50,23 @@ namespace CartApi
                     Description = "Basket sevice API"
                 });
                 options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                options.AddSecurityDefinition("oath2", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.OAuth2,
+                    Flows = new OpenApiOAuthFlows
+                    {
+                        Implicit = new OpenApiOAuthFlow
+                        {
+                            AuthorizationUrl = new Uri($"{Configuration["IdentityUrl"]}/connect/authorize"),
+                            TokenUrl = new Uri($"{Configuration["IdentityUrl"]}/connect/token"),
+                            Scopes = new Dictionary<string, string>
+                            {
+                                {"basket", "Basket Api" }
+                            }
+                        }
+                    },
+
+                });
             });
         }
 
