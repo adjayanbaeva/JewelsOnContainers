@@ -42,6 +42,7 @@ namespace ProductCatalogApi
                     Version = "v1",
                     Description = "Product catalog microservice"
                 });
+
             });
 
         }

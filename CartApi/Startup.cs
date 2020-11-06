@@ -38,6 +38,17 @@ namespace CartApi
                 return ConnectionMultiplexer.Connect(configuration);
             });
             ConfigureAuthService(services);
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "JewelsonContainers - Basket API",
+                    Version = "v1",
+                    Description = "Basket sevice API"
+                });
+                options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+            });
         }
 
         private void ConfigureAuthService(IServiceCollection services)
