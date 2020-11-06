@@ -39,6 +39,7 @@ namespace CartApi
             });
             ConfigureAuthService(services);
 
+
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -83,6 +84,12 @@ namespace CartApi
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseSwagger()
+                .UseSwaggerUI(e =>
+                {
+                    e.SwaggerEndpoint("/swagger/v1/swagger.json", "Basket API");
+                });
 
             app.UseEndpoints(endpoints =>
             {
