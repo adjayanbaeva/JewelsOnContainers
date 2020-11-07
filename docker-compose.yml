@@ -25,6 +25,8 @@ services:
     depends_on:
       - mssqlserver
 
+      
+
   
   mssqlserver:
     image: "microsoft/mssql-server-linux:latest"
@@ -76,6 +78,15 @@ services:
       - frontend
     depends_on:
       - catalog
+  
+  basket.data:
+    image: redis
+    container_name: basketdata
+    ports:
+      - "6080:6370"
+    networks:
+      - backend
+
 
 
 
