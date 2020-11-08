@@ -25,7 +25,23 @@ services:
     depends_on:
       - mssqlserver
 
-      
+  cart:
+    build:
+      context: .\CartApi
+      dockerfile: Dockerfile
+    image: jewels/cartapi
+    environment:
+      IdentityUrl: http://192.168.0.23:6700
+      ConnectionString: basket.data
+    ports: 
+      - "6801:80"
+    container_name: cartapi
+    networks:
+      - backend
+      - frontend
+    depends_on:
+      - basket.data
+      - tokenserver
 
   
   mssqlserver:

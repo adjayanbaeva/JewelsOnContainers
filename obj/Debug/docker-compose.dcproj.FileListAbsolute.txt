@@ -35,3 +35,13 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\S
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.IdentityModel.Logging.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\CartApi.exe
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\CartApi.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\StackExchange.Redis.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\System.Threading.Channels.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Pipelines.Sockets.Unofficial.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\CartApi.pdb
