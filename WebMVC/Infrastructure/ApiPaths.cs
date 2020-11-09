@@ -39,6 +39,12 @@ namespace WebMVC.Infrastructure
             {
                 return $"{baseUri}/{basketId}";
             }
+
+            public static string UpdateBasket(string baseUri)
+            {
+                return baseUri;
+            }
+
         }
     }
 }
