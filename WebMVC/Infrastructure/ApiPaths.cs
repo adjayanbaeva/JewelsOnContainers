@@ -32,5 +32,13 @@ namespace WebMVC.Infrastructure
                 return $"{baseUri}catalogbrands";
             }
         }
+
+        public static class Basket
+        {
+            public static string GetBasket(string baseUri, string basketId)
+            {
+                return $"{baseUri}/{basketId}";
+            }
+        }
     }
 }
