@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace WebMVC.Infrastructure
@@ -24,7 +25,7 @@ namespace WebMVC.Infrastructure
             var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
             if(authorizationToken !=null)
             {
-                //Do this later
+                requestMessage.Headers.Authorization = new AuthenticationHeaderValue(authorizationMethod, authorizationToken);
             }
             var response = await _client.SendAsync(requestMessage);
             return await response.Content.ReadAsStringAsync();
