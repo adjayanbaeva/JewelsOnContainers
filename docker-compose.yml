@@ -96,7 +96,7 @@ services:
     depends_on:
       - catalog
       - cart
-      - tokenServer
+      - tokenserver
   
   basket.data:
     image: redis
