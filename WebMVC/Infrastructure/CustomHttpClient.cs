@@ -64,9 +64,9 @@ namespace WebMVC.Infrastructure
             return response;
         }
 
-        public Task<HttpResponseMessage> PostAsync<T>(string uri, T item, string authorizarionToken = null, string authorizationMethod = "Bearer")
+        public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item, string authorizationToken = null, string authorizationMethod = "Bearer")
         {
-            throw new NotImplementedException();
+            return await DoPostPutAsync(HttpMethod.Post, uri, item, authorizationToken, authorizationMethod);
         }
 
         public Task<HttpResponseMessage> PutAsync<T>(string uri, T item, string authorizationToken = null, string authorizationMethod = "Bearer")
