@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,9 +30,20 @@ namespace WebMVC.Services
 
         }
 
-        public Task<Cart> GetCart(ApplicationUser user)
+        public async Task<Cart> GetCart(ApplicationUser user)
         {
-            throw new NotImplementedException();
+            var token = await GetUserTokenAsync();
+
+            var getBasketUri = ApiPaths.Basket.GetBasket(_remoteServiceBaseUrl, user.Email);
+
+            var dataString = await _apiClient.GetStringAsync(getBasketUri, token);
+
+            var response = JsonConvert.DeserializeObject<Cart>(dataString.ToString()) ??
+                new Cart()
+                {
+                    BuyerId = user.Email
+                };
+            return response;
         }
 
         public Task AddItemToCart(ApplicationUser user, CartItem product)
