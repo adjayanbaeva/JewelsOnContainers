@@ -46,9 +46,23 @@ namespace WebMVC.Services
             return response;
         }
 
-        public Task AddItemToCart(ApplicationUser user, CartItem product)
+        public async Task AddItemToCart(ApplicationUser user, CartItem product)
         {
-            throw new NotImplementedException();
+            var cart = await GetCart(user);
+
+            var basketItem = cart.Items
+                .Where(p => p.ProductId == product.ProductId)
+                .FirstOrDefault();
+            if (basketItem == null)
+            {
+                cart.Items.Add(product);
+            }
+            else
+            {
+                basketItem.Quantity += 1;
+            }
+
+            await UpdateCart(cart);
         }
 
         public Task<Cart> UpdateCart(Cart Cart)
