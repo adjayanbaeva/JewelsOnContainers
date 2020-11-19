@@ -65,7 +65,7 @@ namespace WebMVC.Services
             await UpdateCart(cart);
         }
 
-        public async Task<Cart> UpdateCart(Cart Cart)
+        public async Task<Cart> UpdateCart(Cart cart)
         {
             var token = await GetUserTokenAsync();
             var updateBasketUri = ApiPaths.Basket.UpdateBasket(_remoteServiceBaseUrl);
