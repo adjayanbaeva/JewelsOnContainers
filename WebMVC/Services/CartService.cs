@@ -65,9 +65,13 @@ namespace WebMVC.Services
             await UpdateCart(cart);
         }
 
-        public Task<Cart> UpdateCart(Cart Cart)
+        public async Task<Cart> UpdateCart(Cart Cart)
         {
-            throw new NotImplementedException();
+            var token = await GetUserTokenAsync();
+            var updateBasketUri = ApiPaths.Basket.UpdateBasket(_remoteServiceBaseUrl);
+            var response = await _apiClient.PostAsync(updateBasketUri, Cart, token);
+            response.EnsureSuccessStatusCode();
+            return cart;
         }
 
         public Task<Cart> SetQuantities(ApplicationUser user, Dictionary<string, int> quantities)
