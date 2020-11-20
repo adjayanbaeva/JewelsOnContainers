@@ -69,7 +69,7 @@ namespace WebMVC.Services
         {
             var token = await GetUserTokenAsync();
             var updateBasketUri = ApiPaths.Basket.UpdateBasket(_remoteServiceBaseUrl);
-            var response = await _apiClient.PostAsync(updateBasketUri, Cart, token);
+            var response = await _apiClient.PostAsync(updateBasketUri, cart, token);
             response.EnsureSuccessStatusCode();
             return cart;
         }
@@ -88,9 +88,11 @@ namespace WebMVC.Services
             return basket;
         }
 
-        public Task ClearCart(ApplicationUser user)
+        public async Task ClearCart(ApplicationUser user)
         {
-            throw new NotImplementedException();
+            var token = await GetUserTokenAsync();
+            var cleanBasketUri = ApiPaths.Basket.CleanBasket(_remoteServiceBaseUrl, user.Email);
+            var response = await _apiClient.DeleteAsync(cleanBasketUri);
         }
 
         async Task<string> GetUserTokenAsync()
