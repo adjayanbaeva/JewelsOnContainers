@@ -74,9 +74,18 @@ namespace WebMVC.Services
             return cart;
         }
 
-        public Task<Cart> SetQuantities(ApplicationUser user, Dictionary<string, int> quantities)
+        public async Task<Cart> SetQuantities(ApplicationUser user, Dictionary<string, int> quantities)
         {
-            throw new NotImplementedException();
+            var basket = await GetCart(user);
+            basket.Items.ForEach(x =>
+            {
+                //Simplify this logic by using the new out variable initializer
+                if (quantities.TryGetValue(x.Id, out var quantity))
+                {
+                    x.Quantity = quantity;
+                }
+            });
+            return basket;
         }
 
         public Task ClearCart(ApplicationUser user)
