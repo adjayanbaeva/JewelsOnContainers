@@ -66,7 +66,7 @@ namespace WebMVC
                 options.Scope.Add("profile");
                 options.Scope.Add("offline_access");
                 options.Scope.Add("basket");
-                options.Scope.Add("order");
+                
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
 
