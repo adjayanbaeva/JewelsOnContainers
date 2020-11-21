@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ezgosVQJKouS/GqjDf6APIjpks5LhxkoR+hcTJLW+46pnqVWVr3V6ljg4+qR+Qn2UmrY7m2txNMQB9Ir+7srgQ==",
+  "dgSpecHash": "KDO6NT/xCy3hynUT0Cp8pwBkCln8RN8AVe3m6+qcHawOYI/Rw7cuS+bBAZrQ+RhHDFCZzq6TTObKb54wRgnksg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ainur Dzhaianbaeva\\Documents\\Kal Academy\\JewelsOnContainers\\WebMVC\\WebMVC.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.5.0\\microsoft.identitymodel.tokens.5.5.0.nupkg.sha512",
     "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\polly\\7.2.1\\polly.7.2.1.nupkg.sha512",
     "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\system.identitymodel.tokens.jwt\\5.5.0\\system.identitymodel.tokens.jwt.5.5.0.nupkg.sha512",
     "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
