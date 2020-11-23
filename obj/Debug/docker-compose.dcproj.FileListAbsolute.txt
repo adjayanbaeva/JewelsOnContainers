@@ -45,3 +45,4 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\S
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\System.IO.Pipelines.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\CartApi.pdb
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\bin\Debug\Polly.dll
