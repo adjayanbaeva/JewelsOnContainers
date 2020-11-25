@@ -1,0 +1,10 @@
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\OrderApi.exe
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.csprojAssemblyReference.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.AssemblyInfoInputs.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.AssemblyInfo.cs
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.RazorTargetAssemblyInfo.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\staticwebassets\OrderApi.StaticWebAssets.Manifest.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\staticwebassets\OrderApi.StaticWebAssets.xml

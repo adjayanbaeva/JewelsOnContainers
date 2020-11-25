@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Polly.CircuitBreaker;
 using WebMVC.Models;
 using WebMVC.Services;
-using Polly.CircuitBreaker;
 using WebMVC.Models.CartModels;
 
 namespace WebMVC.Controllers
