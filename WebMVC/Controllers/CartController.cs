@@ -7,6 +7,7 @@ using Polly.CircuitBreaker;
 using WebMVC.Models;
 using WebMVC.Services;
 using Polly.CircuitBreaker;
+using WebMVC.Models.CartModels;
 
 namespace WebMVC.Controllers
 {
@@ -47,6 +48,34 @@ namespace WebMVC.Controllers
             }
 
             return View();
+        }
+
+        public async Task<IActionResult> AddToCart(CatalogItem productDetails)
+        {
+            try
+            {
+                if (productDetails.Id > 0)
+                {
+                    var user = _identityService.Get(HttpContext.User);
+                    var product = new CartItem()
+                    {
+                        Id = Guid.NewGuid().ToString(),
+                        Quantity = 1,
+                        ProductName = productDetails.Name,
+                        PictureUrl = productDetails.PictureUrl,
+                        UnitPrice = productDetails.Price,
+                        ProductId = productDetails.Id.ToString()
+                    };
+                    await _cartService.AddItemToCart(user, product);
+                }
+                return RedirectToAction("Index", "Catalog");
+            }
+            catch (BrokenCircuitException)
+            {
+                // Catch error when CartApi is in circuit-opened mode                 
+                HandleBrokenCircuitException();
+            }
+            return RedirectToAction("Index", "Catalog");
         }
 
         private void HandleBrokenCircuitException()
