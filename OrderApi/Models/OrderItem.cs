@@ -23,6 +23,10 @@ namespace OrderApi.Models
 
         public OrderItem(int productId, string productName, decimal unitPrice, string pictureUrl, int units = 1)
         {
+            if (units <= 0)
+            {
+                throw new OrderingDomainException("Invalid number of units");
+            }
             ProductId = ProductId;
             ProductName = ProductName;
             UnitPrice = unitPrice;
