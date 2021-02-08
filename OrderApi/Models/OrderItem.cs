@@ -34,6 +34,14 @@ namespace OrderApi.Models
             PictureUrl = pictureUrl;
         }
 
+        public void SetPictureUri(string pictureUri)
+        {
+            if(!String.IsNullOrWhiteSpace(pictureUri))
+            {
+                PictureUrl = pictureUri;
+            }
+        }
+
 
     }
 }
