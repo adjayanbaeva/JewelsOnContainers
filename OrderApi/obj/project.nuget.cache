@@ -1,10 +1,29 @@
 {
   "version": 2,
-  "dgSpecHash": "R4Fi8452QL9Lwig46vdr/F/5R9FYm3fJHeI6KIttZclNItorx/mxxf2Auw7MqssruKYL/aTd4EEAO1/8WRYWGQ==",
+  "dgSpecHash": "XF+qKyjJKhWaKu4GYaF+rFlNbG+yOKmzNs30IDCcQyTQX9QGddL/Gme84ia5UWIYS+5E7oQUchS6Q1BPDWdnrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ainur Dzhaianbaeva\\Documents\\Kal Academy\\JewelsOnContainers\\OrderApi\\OrderApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.0\\microsoft.entityframeworkcore.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.0\\microsoft.entityframeworkcore.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.0\\microsoft.entityframeworkcore.analyzers.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.0\\microsoft.extensions.caching.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.0\\microsoft.extensions.caching.memory.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.0\\microsoft.extensions.configuration.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.0\\microsoft.extensions.configuration.binder.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.0\\microsoft.extensions.dependencyinjection.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.0\\microsoft.extensions.dependencyinjection.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.logging\\3.1.0\\microsoft.extensions.logging.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.0\\microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ainur Dzhaianbaeva\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
