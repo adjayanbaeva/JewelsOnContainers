@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using OrderApi.Data;
+using OrderApi.Models;
 
 namespace OrderApi.Controllers
 {
@@ -26,6 +29,30 @@ namespace OrderApi.Controllers
             _ordersContext = ordersContext ?? throw new ArgumentNullException(nameof(ordersContext));
             ordersContext.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
             _logger = logger;
+        }
+
+        //POST api/Order/new
+        [Route("new")]
+        [HttpPost]
+        [ProducesResponseType((int)HttpStatusCode.Accepted)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> CreateOrder([FromBody] Order order)
+        {
+            order.OrderStatus = OrderStatus.Preparing;
+            order.OrderDate = DateTime.UtcNow;
+
+            _ordersContext.Orders.Add(order);
+            _ordersContext.OrderItems.AddRange(order.OrderItems);
+
+            try
+            {
+                await _ordersContext.SaveChangesAsync();
+                return Ok(new { order.OrderId });
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
     }
 }
