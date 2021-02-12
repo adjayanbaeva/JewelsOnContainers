@@ -54,5 +54,23 @@ namespace OrderApi.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpGet("{id}", Name = "GetOrder")]
+        [ProducesResponseType((int)HttpStatusCode.Accepted)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> GetOrder(int id)
+        {
+
+            var item = await _ordersContext.Orders
+                .Include(x => x.OrderItems)
+                .SingleOrDefaultAsync(ci => ci.OrderId == id);
+            if (item != null)
+            {
+                return Ok(item);
+            }
+
+            return NotFound();
+
+        }
     }
 }
