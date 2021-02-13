@@ -72,5 +72,18 @@ namespace OrderApi.Controllers
             return NotFound();
 
         }
+
+
+        [Route("")]
+        [HttpGet]
+        [ProducesResponseType((int)HttpStatusCode.Accepted)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> GetOrders()
+        {
+            var orders = await _ordersContext.Orders.ToListAsync();
+
+
+            return Ok(orders);
+        }
     }
 }
