@@ -34,8 +34,6 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bi
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\OrderApi.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\OrderApi.pdb
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.csproj.CoreCompileInputs.cache
-C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.pdb
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.genruntimeconfig.cache
