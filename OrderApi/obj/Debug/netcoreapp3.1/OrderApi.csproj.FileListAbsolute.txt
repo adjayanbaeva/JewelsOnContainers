@@ -37,3 +37,7 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bi
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.pdb
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\obj\Debug\netcoreapp3.1\OrderApi.genruntimeconfig.cache
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\OrderApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
