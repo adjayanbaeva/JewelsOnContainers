@@ -58,6 +58,11 @@ namespace WebMVC.Infrastructure
             {
                 return $"{baseUri}/{orderId}";
             }
+
+            public static string GetOrders(string baseUri)
+            {
+                return baseUri;
+            }
         }
 
 
