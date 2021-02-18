@@ -51,5 +51,15 @@ namespace WebMVC.Infrastructure
             }
 
         }
+
+        public class Order
+        {
+            public static string GetOrder(string baseUri, string orderId)
+            {
+                return $"{baseUri}/{orderId}";
+            }
+        }
+
+
     }
 }
