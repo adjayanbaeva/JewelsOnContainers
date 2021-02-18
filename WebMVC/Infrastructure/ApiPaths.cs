@@ -63,6 +63,11 @@ namespace WebMVC.Infrastructure
             {
                 return baseUri;
             }
+
+            public static string AddNewOrder(string baseUri)
+            {
+                return $"{baseUri}/new";
+            }
         }
 
 
