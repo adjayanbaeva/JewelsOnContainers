@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
@@ -28,6 +29,7 @@ namespace WebMVC.Services
             _logger = logger.CreateLogger<OrderService>();
         }
 
+
         public Task<int> CreateOrder(Order order)
         {
             throw new NotImplementedException();
@@ -41,6 +43,13 @@ namespace WebMVC.Services
         public Task<List<Order>> GetOrders()
         {
             throw new NotImplementedException();
+        }
+
+        async Task<string> GetUserTokenAsync()
+        {
+            var context = _httpContextAccesor.HttpContext;
+
+            return await context.GetTokenAsync("access_token");
         }
     }
 }
