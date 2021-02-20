@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,9 +31,22 @@ namespace WebMVC.Services
         }
 
 
-        public Task<int> CreateOrder(Order order)
+        public async Task<int> CreateOrder(Order order)
         {
-            throw new NotImplementedException();
+            var token = await GetUserTokenAsync();
+
+            var addNewOrderUri = ApiPaths.Order.AddNewOrder(_remoteServiceBaseUrl);
+            var response = await _apiClient.PostAsync(addNewOrderUri, order, token);
+            if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+            {
+                throw new Exception("Error creating order, try later.");
+            }
+            var jsonString = response.Content.ReadAsStringAsync();
+
+            jsonString.Wait();
+            dynamic data = JObject.Parse(jsonString.Result);
+            string value = data.orderId;
+            return Convert.ToInt32(value);
         }
 
         public Task<Order> GetOrder(string orderId)
