@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -54,9 +55,15 @@ namespace WebMVC.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<Order>> GetOrders()
+        public async Task<List<Order>> GetOrders()
         {
-            throw new NotImplementedException();
+            var token = await GetUserTokenAsync();
+            var allOrdersUri = ApiPaths.Order.GetOrders(_remoteServiceBaseUrl);
+
+            var dataString = await _apiClient.GetStringAsync(allOrdersUri, token);
+            var response = JsonConvert.DeserializeObject<List<Order>>(dataString);
+
+            return response; 
         }
 
         async Task<string> GetUserTokenAsync()
