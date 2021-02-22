@@ -50,9 +50,16 @@ namespace WebMVC.Services
             return Convert.ToInt32(value);
         }
 
-        public Task<Order> GetOrder(string orderId)
+        public async Task<Order> GetOrder(string orderId)
         {
-            throw new NotImplementedException();
+            var token = await GetUserTokenAsync();
+            var getOrderUri = ApiPaths.Order.GetOrder(_remoteServiceBaseUrl, id);
+
+            var dataString = await _apiClient.GetStringAsync(getOrderUri, token);
+            
+            var response = JsonConvert.DeserializeObject<Order>(dataString);
+
+            return response;
         }
 
         public async Task<List<Order>> GetOrders()
