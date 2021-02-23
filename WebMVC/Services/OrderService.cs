@@ -50,7 +50,7 @@ namespace WebMVC.Services
             return Convert.ToInt32(value);
         }
 
-        public async Task<Order> GetOrder(string orderId)
+        public async Task<Order> GetOrder(string id)
         {
             var token = await GetUserTokenAsync();
             var getOrderUri = ApiPaths.Order.GetOrder(_remoteServiceBaseUrl, id);
