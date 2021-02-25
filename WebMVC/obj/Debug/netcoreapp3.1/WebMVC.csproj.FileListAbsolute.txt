@@ -48,7 +48,7 @@ C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\bin\
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\bin\Debug\netcoreapp3.1\Polly.dll
-C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\WebMVC.csproj.CoreCompileInputs.cache
-C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\WebMVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Cart\Default.cshtml.g.cs
 C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CartList\Default.cshtml.g.cs
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Order\Create.cshtml.g.cs
+C:\Users\Ainur Dzhaianbaeva\Documents\Kal Academy\JewelsOnContainers\WebMVC\obj\Debug\netcoreapp3.1\Razor\Views\Order\_OrderItems.cshtml.g.cs
