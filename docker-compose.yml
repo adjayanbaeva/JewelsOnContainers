@@ -91,7 +91,7 @@ services:
       CartUrl: http://cart
       OrderUrl: http://OrderUrl
       StripePublicKey: pk_test_51IOHyGIKqOC1L60vUHexItAwPIoQb3mVTGUnPkwLMHy1KMum14kizeCmeqs7hD9Y8o9VvRQ6Fc4FtuN9MyK3RuNk00LT1Shuj5
-      StripePrivateKey: sk_test_51IOHyGIKqOC1L60vWFIBkwUag0TDaylkfBCDNMpJxOlBHcaS0KaYcgAy4ldZEurdbjPaeLBcO583fPEIijGQlhxl00RPFB49G4 
+      StripePrivateKey:  
     ports:
       - "5210:80"
     networks:
