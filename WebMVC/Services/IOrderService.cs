@@ -6,7 +6,7 @@ using WebMVC.Models.OrderModels;
 
 namespace WebMVC.Services
 {
-    interface IOrderService
+    public interface IOrderService
     {
         Task<List<Order>> GetOrders();
         //Task<List<Order>> GetOrdersByUser(ApplicationUser user);
