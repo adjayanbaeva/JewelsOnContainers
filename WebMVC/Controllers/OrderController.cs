@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Stripe;
 using WebMVC.Models;
+using Order = WebMVC.Models.OrderModels.Order;
 using WebMVC.Services;
 
 namespace WebMVC.Controllers
@@ -29,7 +31,26 @@ namespace WebMVC.Controllers
             _logger = logger;
             _config = config;
         }
-        public IActionResult Index()
+
+        public async Task<IActionResult> Create(Order frmOrder)
+        {
+
+            if (ModelState.IsValid)
+            {
+                var user = _identitySvc.Get(HttpContext.User);
+
+                Order order = frmOrder;
+
+                order.UserName = user.Email;
+                order.BuyerId = user.Email;
+
+                var options = new RequestOptions
+                {
+                    ApiKey = _config["StripePrivateKey"]
+                };
+            }
+        }
+                public IActionResult Index()
         {
             return View();
         }
