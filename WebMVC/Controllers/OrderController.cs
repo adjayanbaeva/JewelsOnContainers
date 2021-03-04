@@ -59,6 +59,25 @@ namespace WebMVC.Controllers
                     ReceiptEmail = order.UserName,
 
                 };
+
+                var chargeService = new ChargeService();
+
+
+
+                Charge stripeCharge = null;
+                try
+                {
+                    stripeCharge = chargeService.Create(chargeOptions, options);
+                }
+                catch (StripeException stripeException)
+                {
+                    ModelState.AddModelError(string.Empty, stripeException.Message);
+                    return View(frmOrder);
+                }
+            }
+            else
+            {
+                return View(frmOrder);
             }
         }
                 public IActionResult Index()
