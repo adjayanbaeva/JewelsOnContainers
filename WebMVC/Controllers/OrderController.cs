@@ -48,6 +48,17 @@ namespace WebMVC.Controllers
                 {
                     ApiKey = _config["StripePrivateKey"]
                 };
+
+                var chargeOptions = new ChargeCreateOptions()
+
+                {
+                    Amount = (int)(order.OrderTotal * 100),
+                    Currency = "usd",
+                    Source = order.StripeToken,
+                    Description = string.Format("Order Payment {0}", order.UserName),
+                    ReceiptEmail = order.UserName,
+
+                };
             }
         }
                 public IActionResult Index()
