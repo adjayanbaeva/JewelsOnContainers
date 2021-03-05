@@ -9,6 +9,7 @@ using Stripe;
 using WebMVC.Models;
 using Order = WebMVC.Models.OrderModels.Order;
 using WebMVC.Services;
+using Polly.CircuitBreaker;
 
 namespace WebMVC.Controllers
 {
@@ -74,13 +75,42 @@ namespace WebMVC.Controllers
                     ModelState.AddModelError(string.Empty, stripeException.Message);
                     return View(frmOrder);
                 }
+                try
+                {
+
+                    if (stripeCharge.Id != null)
+                    {
+                        
+                        order.PaymentAuthCode = stripeCharge.Id;
+
+                        int orderId = await _orderSvc.CreateOrder(order);
+                  
+                        return RedirectToAction("Complete", new { id = orderId, userName = user.UserName });
+                    }
+
+                    else
+                    {
+                        ViewData["message"] = "Payment cannot be processed, try again";
+                        return View(frmOrder);
+                    }
+
+                }
+                catch (BrokenCircuitException)
+                {
+                    ModelState.AddModelError("Error", "It was not possible to create a new order, please try later on. (Business Msg Due to Circuit-Breaker)");
+                    return View(frmOrder);
+                }
             }
+
+        
             else
             {
                 return View(frmOrder);
             }
         }
-                public IActionResult Index()
+                
+        
+        public IActionResult Index()
         {
             return View();
         }
