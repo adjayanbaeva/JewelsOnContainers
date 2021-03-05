@@ -108,8 +108,16 @@ namespace WebMVC.Controllers
                 return View(frmOrder);
             }
         }
-                
-        
+
+        public IActionResult Complete(int id, string userName)
+        {
+
+           
+            return View(id);
+
+        }
+
+
         public IActionResult Index()
         {
             return View();
