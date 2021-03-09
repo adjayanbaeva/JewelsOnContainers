@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using MassTransit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,14 +22,17 @@ namespace OrderApi.Controllers
         private readonly OrdersContext _ordersContext;
         private readonly IConfiguration _config;
         private readonly ILogger<OrdersController> _logger;
+        private IPublishEndpoint _bus;
         public OrdersController(OrdersContext ordersContext,
             ILogger<OrdersController> logger,
-            IConfiguration config)
+            IConfiguration config,
+            IPublishEndpoint bus)
         {
             _config = config;
             _ordersContext = ordersContext ?? throw new ArgumentNullException(nameof(ordersContext));
             ordersContext.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
             _logger = logger;
+            _bus = bus;
         }
 
         //POST api/Order/new
