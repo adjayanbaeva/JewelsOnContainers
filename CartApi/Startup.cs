@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CartApi.Messaging.Consumers;
 using CartApi.Models;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -66,6 +68,28 @@ namespace CartApi
                             }
                         }
                     },
+
+                });
+            });
+
+            services.AddMassTransit(cfg =>
+            {
+                cfg.AddConsumer<OrderCompletedEventConsumer>();
+                cfg.AddBus(provider =>
+                {
+                    return Bus.Factory.CreateUsingRabbitMq(rmq =>
+                    {
+                        rmq.Host(new Uri("rabbitmq://rabbitmq"), "/", h =>
+                        {
+                            h.Username("guest");
+                            h.Password("guest");
+                        });
+                        rmq.ReceiveEndpoint("JewelscartApr20", e =>
+                        {
+                            e.ConfigureConsumer<OrderCompletedEventConsumer>(provider);
+
+                        });
+                    });
 
                 });
             });
