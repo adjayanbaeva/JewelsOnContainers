@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Common.Messaging;
 using MassTransit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -51,6 +52,7 @@ namespace OrderApi.Controllers
             try
             {
                 await _ordersContext.SaveChangesAsync();
+                _bus.Publish(new OrderCompletedEvent(order.BuyerId)).Wait();
                 return Ok(new { order.OrderId });
             }
             catch
